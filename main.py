@@ -5,7 +5,7 @@ from PyQt5.QtCore import Qt,QSize
 import convert
 from main_project_form import Ui_MainWindow
 from Reader import get_points
-from functions import get_all_curvatures,sl
+from functions import get_all_curvatures,sll
 from Angles import get_all_sectors_sum,angle_between_points
 from Graf import grafic,gist, podpis,circle
 
@@ -47,7 +47,7 @@ class Form(QtWidgets.QMainWindow, Ui_MainWindow):
             pos = event.pos()
             pixmap = self.label.pixmap()
             if pixmap:
-                masiv=[sl(i,[pos.x(),pos.y()]) for i in sum(self.points,[])[1:len(sum(self.points,[]))-1]]
+                masiv=[sll(i,[pos.x(),pos.y()]) for i in sum(self.points,[])[1:len(sum(self.points,[]))-1]]
                 self.label.setPixmap(podpis(self.points,self.max_value_1,self.max_value_2,sum(self.points,[])[masiv.index(min(masiv))+1]))
                 self.comboBox.setCurrentIndex(masiv.index(min(masiv)))
     
