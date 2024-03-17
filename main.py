@@ -9,8 +9,8 @@ from functions import get_all_curvatures,sll
 from Angles import get_all_sectors_sum,angle_between_points
 from Graf import grafic,gist, podpis,circle
 
-# def sl(point1,point2): 
-#     return ((point1[0]-point2[0])**2+(point1[1]-point2[1])**2)**(1/2)
+def sl(point1,point2): 
+    return ((point1[0]-point2[0])**2+(point1[1]-point2[1])**2)**(1/2)
 
 class Form(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self, parent=None):
